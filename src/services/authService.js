@@ -4,8 +4,12 @@ import { auth } from "../firebaseConfig";
 
 export function SignIn() {
   return (
-    <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>
-      Sign In
+    <button
+      type="button"
+      class="signIn"
+      onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}
+    >
+      Click here to enter your own space
     </button>
   );
 }
@@ -13,8 +17,10 @@ export function SignIn() {
 export function SignOut() {
   return (
     <div>
-      Hello, {auth.currentUser.displayName} &nbsp;
-      <button onClick={() => signOut(auth)}>Sign Out</button>
+      <p class="userGreeting">Hello, {auth.currentUser.displayName}&nbsp;</p>
+      <button type="button" class="signOut" onClick={() => signOut(auth)}>
+        Sign Out
+      </button>
     </div>
   );
 }

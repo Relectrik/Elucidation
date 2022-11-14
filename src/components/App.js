@@ -34,8 +34,21 @@ export default function App() {
 
   return (
     <div className="App">
-      <header>Blog</header>
-
+      <header>
+        <p class="headerTitle">
+          Elucidation, a place to untangle your thoughts
+        </p>
+        {user && (
+          <button
+            type="button"
+            class="newArticle"
+            onClick={() => setWriting(true)}
+          >
+            New Article
+          </button>
+        )}
+        {!user ? <SignIn /> : <SignOut />}
+      </header>
       {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
 
       {!user ? (
@@ -45,8 +58,6 @@ export default function App() {
       ) : (
         <Article article={article} />
       )}
-      {user && <button onClick={() => setWriting(true)}>New Article</button>}
-      {!user ? <SignIn /> : <SignOut />}
     </div>
   );
 }

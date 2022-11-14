@@ -6,28 +6,56 @@
   overflow: scroll;
 }
 
+.signOut {
+  margin-left: 290px;
+}
+
+.newArticle {
+  position: fixed;
+  margin-top: 750px;
+  margin-right: 1300px;
+}
+
+.userGreeting {
+  position: fixed;
+  margin-bottom: 300px;
+  margin-left: 100px;
+  font-size: 20px;
+  color: rgb(44, 44, 46);
+  text-decoration: underline;
+}
+
+.headerTitle {
+  margin: 0px 85px 0px 0px;
+  padding: 0px;
+}
+
 button {
   display: flex;
-  justify-content: flex-end;
-  margin: auto;
-  margin-top: 3px;
-  position: fixed;
-  padding: 5px 10px 5px 10px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  padding: 30px;
+  font-size: 30px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 5px;
+  border-color: transparent;
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(44, 44, 46);
 }
 
 button:hover {
+  background-image: url(./space.webp);
+  transition: background 10s;
 }
 
 header {
+  text-align: center;
+  font-size: 50px;
   display: flex;
   flex-grow: 4;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: black;
+  justify-content: center;
+  background-color: rgb(142, 142, 147);
   color: white;
   grid-column: 1 / span 2;
   padding: 10px 5px;
