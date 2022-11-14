@@ -19,15 +19,71 @@
 .userGreeting {
   position: fixed;
   margin-bottom: 300px;
-  margin-left: 100px;
+  margin-left: 85px;
   font-size: 20px;
-  color: rgb(44, 44, 46);
+  color: rgb(242, 242, 247);
   text-decoration: underline;
 }
 
 .headerTitle {
   margin: 0px 85px 0px 0px;
   padding: 0px;
+}
+
+.titleInput {
+  border: none;
+  border-bottom: 2px solid rgb(44, 44, 46);
+  margin-right: 50px;
+  padding: 15px 15px 15px 15px;
+  transition: 0.3s ease-in;
+  width: 250px;
+}
+
+.titleInput::placeholder {
+  font-size: 15px;
+  transform: translateX(0);
+  transition: 0.4s ease-out;
+  text-align: center;
+}
+
+.titleInput:focus::placeholder {
+  transform: translateX(300px);
+  transition: 0.4s;
+}
+
+.titleInput:focus {
+  transition: 0.5s ease-in-out;
+  margin-top: 15px;
+}
+
+.bodyInput {
+  border: none;
+  border-bottom: 2px solid rgb(44, 44, 46);
+  transition: 0.5s ease-in;
+  font-family: inherit;
+}
+
+.bodyInput::placeholder {
+  transition: 0.5s ease-in-out;
+  padding-top: 45px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.bodyInput:focus::placeholder {
+  transform: translateX(300px);
+  transition: 0.4s;
+}
+
+.bodyInput:focus {
+  margin-top: 15px;
+  transition: 0.5s ease-in-out;
+}
+
+.articleSelect {
+  color: rgb(242, 242, 247);
+  margin: 5px;
+  font-size: 20px;
 }
 
 button {
@@ -46,7 +102,7 @@ button {
 
 button:hover {
   background-image: url(./space.webp);
-  transition: background 10s;
+  transition: 0.6s ease-in;
 }
 
 header {
@@ -55,7 +111,7 @@ header {
   display: flex;
   flex-grow: 4;
   justify-content: center;
-  background-color: rgb(142, 142, 147);
+  background-color: rgb(99, 99, 102);
   color: white;
   grid-column: 1 / span 2;
   padding: 10px 5px;
@@ -81,7 +137,8 @@ article {
 }
 
 nav {
-  background-color: #dee9ff;
+  background-color: rgb(72, 72, 74);
+  color: white;
 }
 
 nav p:hover {
@@ -98,7 +155,6 @@ article .body {
 }
 
 .error {
-  background-color: red;
-  color: gold;
+  color: rgb(255, 45, 85);
   padding: 5px;
 }
